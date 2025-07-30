@@ -27,4 +27,4 @@ const initDB = async () => {
     console.log("Data was initialized");
 };
 
-initDB();
+module.exports = { initDB };
