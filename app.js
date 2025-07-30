@@ -2,6 +2,7 @@ if(process.env.NODE_ENV != "production"){
     require("dotenv").config();
 }
 
+const { initDB } = require("./init/index.js");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -72,6 +73,16 @@ app.get("/", (req,res) => {
     res.redirect("/listings");
 });
 
+app.get("/run-init-db", async (req, res) => {
+    try {
+        await initDB();
+        res.send("✅ Database has been initialized.");
+    } catch (e) {
+        console.error(e);
+        res.status(500).send("❌ Failed to initialize DB.");
+    }
+});
+
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -124,19 +135,6 @@ app.use((err, req, res, next) => {
     // For browser requests — send HTML with correct status
     res.status(statusCode).render("error.ejs", { message });
 });
-
-const { initDB } = require("./init/index.js");
-
-app.get("/run-init-db", async (req, res) => {
-    try {
-        await initDB();
-        res.send("✅ Database has been initialized.");
-    } catch (e) {
-        console.error(e);
-        res.status(500).send("❌ Failed to initialize DB.");
-    }
-});
-
 
 app.listen(8080, () => {
     console.log("Server is listening to port 8080");
