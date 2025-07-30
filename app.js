@@ -77,9 +77,9 @@ app.get("/run-init-db", async (req, res) => {
     try {
         await initDB();
         res.send("✅ Database has been initialized.");
-    } catch (e) {
-        console.error(e);
-        res.status(500).send("❌ Failed to initialize DB.");
+    } catch (err) {
+        console.error("Error during DB init:", err);
+        res.status(500).send("❌ Failed to initialize DB: " + err.message);
     }
 });
 
