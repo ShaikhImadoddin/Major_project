@@ -2,7 +2,7 @@ if(process.env.NODE_ENV != "production"){
     require("dotenv").config();
 }
 
-const { initDB } = require("./init/index.js");
+// const { initDB } = require("./init/index.js");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -73,15 +73,15 @@ app.get("/", (req,res) => {
     res.redirect("/listings");
 });
 
-app.get("/run-init-db", async (req, res) => {
-    try {
-        await initDB();
-        res.send("✅ Database has been initialized.");
-    } catch (err) {
-        console.error("Error during DB init:", err);
-        res.status(500).send("❌ Failed to initialize DB: " + err.message);
-    }
-});
+// app.get("/run-init-db", async (req, res) => {
+//     try {
+//         await initDB();
+//         res.send("✅ Database has been initialized.");
+//     } catch (err) {
+//         console.error("Error during DB init:", err);
+//         res.status(500).send("❌ Failed to initialize DB: " + err.message);
+//     }
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
