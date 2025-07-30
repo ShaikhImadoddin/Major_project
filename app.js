@@ -125,6 +125,19 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", { message });
 });
 
+const { initDB } = require("./init/index.js");
+
+app.get("/run-init-db", async (req, res) => {
+    try {
+        await initDB();
+        res.send("✅ Database has been initialized.");
+    } catch (e) {
+        console.error(e);
+        res.status(500).send("❌ Failed to initialize DB.");
+    }
+});
+
+
 app.listen(8080, () => {
     console.log("Server is listening to port 8080");
 });
