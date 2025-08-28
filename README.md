@@ -5,11 +5,11 @@ A full-stack Airbnb-like web application built with **Node.js, Express,EJS,Mongo
 ---
 
 ## 🚀 Features
-- 🔹 **User Authentication** – Secure login/signup with JWT-based authorization.  
-- 🔹 **CRUD Operations** – Add, view, edit (price, description, location), and delete property listings.  
-- 🔹 **RESTful APIs** – Well-structured endpoints for property management and authentication.  
-- 🔹 **Responsive UI** – Frontend built with Bootstrap, mobile-friendly design.  
-- 🔹 **Role-based Access Control** – Separate permissions for users and admins.  
+- **User Authentication** – Secure login/signup with JWT-based authorization.  
+- **CRUD Operations** – Add, view, edit (price, description, location), and delete property listings.  
+- **RESTful APIs** – Well-structured endpoints for property management and authentication.  
+- **Responsive UI** – Frontend built with Bootstrap, mobile-friendly design.  
+- **Role-based Access Control** – Separate permissions for users and admins.  
 
 ---
 
