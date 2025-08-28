@@ -20,3 +20,41 @@ A full-stack Airbnb-like web application built with **Node.js, Express,EJS,Mongo
 - **Authentication:** JWT  
 
 ---
+
+## ⚙️ Installation & Setup
+1. Clone the repository  
+   ```bash
+    git clone https://github.com/your-username/airbnb-clone.git
+    cd airbnb-clone
+   ```
+2. Install dependencies
+  ```bash
+    npm install
+  ```
+3. Setup environment variables in .env
+  ```bash
+    PORT=3000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret
+  ```
+4. Start the server
+  ```bash
+    npm start
+  ```
+---
+
+✨ Future Enhancements
+
+🖼️ Image upload for property listings
+
+⭐ Reviews & ratings for properties
+
+📍 Map integration for locations
+
+---
+
+🧑‍💻 Author
+
+Imadoddin Shaikh
+📧 shaikhimadoddin75@gmail.com
+
