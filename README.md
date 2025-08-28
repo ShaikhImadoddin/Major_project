@@ -12,3 +12,11 @@ A full-stack Airbnb-like web application built with **Node.js, Express,EJS,Mongo
 - 🔹 **Role-based Access Control** – Separate permissions for users and admins.  
 
 ---
+
+## 📂 Tech Stack
+- **Backend:** Node.js, Express.js, EJS. 
+- **Database:** MongoDB  
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap  
+- **Authentication:** JWT  
+
+---
